@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Роман Насыров](https://up.htmlacademy.ru/htmlcss/28/user/642191).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/nikita_rogatnev).
 
 ---
 
