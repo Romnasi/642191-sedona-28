@@ -8,38 +8,40 @@
 
     <header>
       <nav>
-        <a href="">
+        <a>
           <img src="img/logo.svg" width="138" height="70" alt="Логотип сайта городка Седона">
         </a>
         <ul>
-          <li><a href="">Информация</a></li>
-          <li><a href="">Фото и видео</a></li>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
           <li><a href="#map">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+          <li><a href="#">Гостиницы</a></li>
         </ul>
 
       </nav>
     </header>
 
     <main>
-      <section>
+      <section class="main-lead">
         <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
         <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-        <img src="img/welcome-index.png" width="188" height="45" alt="welcome">
-        <img src="img/to-the-gorgeous.png" width="256" height="29" alt="to the gorgeous">
-        <img src="img/sedona-index.png"  width="457" height="213" alt="Sedona «Because the Grand Canyon sucks!»">
+        <img src="img/welcome-to-sedona.png" width="457" height="351" alt="Welcome to the gorgeous Sedona">
       </section>
 
       <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
 
-      <section>
-        <h3>Настоящий городок</h3>
-        <p>— №1 —</p>
-        <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-        <img src="img/real-town.jpg" width="800" height="256" alt="Седона — это настоящий городок в Аризоне, а не атракцион для туристов">
+      <section class="features">
+        <div class="features-text">
+          <h3>Настоящий городок</h3>
+          <span>— №1 —</span>
+          <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+        </div>
+        <div class="features-image">
+          <img src="img/real-town.jpg" width="800" height="256" alt="Седона — это настоящий городок в Аризоне, а не атракцион для туристов">
+        </div>
       </section>
 
-      <section>
+      <section class="main-recommend">
         <h2 class="visually-hidden">Рекомендуем</h2>
         <ul>
           <li>
@@ -57,34 +59,36 @@
         </ul>
       </section>
 
-      <section>
-        <h3>Там есть Мост дьявола</h3>
-        <p>— №2 —</p>
-        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-        <img src="img/devils-bridge.jpg" width="800" height="256" alt="Мост Дьявола над пропастью">
+      <section class="features">
+        <div class="features-text">
+          <h3>Там есть Мост дьявола</h3>
+          <span>— №2 —</span>
+          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        </div>
+        <div class="features-image">
+          <img src="img/devils-bridge.jpg" width="800" height="256" alt="Мост Дьявола над пропастью">
+        </div>
       </section>
 
-      <section>
-        <ul>
-          <li>
-            <h3>Небольшая площадь</h3>
-            <p>— №3 —</p>
-            <p>все достопримечательности находятся очень близко</p>
-          </li>
-          <li>
-            <h3>Красивая дорога</h3>
-            <p>— №4 —</p>
-            <p>ехать в седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
-          <li>
-            <h3>Мало туристов</h3>
-            <p>— №5 —</p>
-            <p>большинство едет в гранд каньон и толпится там</p>
-          </li>
-        </ul>
+      <section class="features-last-three">
+        <div class="feature-third">
+          <h3>Небольшая площадь</h3>
+          <span>— №3 —</span>
+          <p>все достопримечательности находятся очень близко</p>
+        </div>
+        <div class="feature-fourth">
+          <h3>Красивая дорога</h3>
+          <span>— №4 —</span>
+          <p>ехать в седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+        <div class="feature-fifth">
+          <h3>Мало туристов</h3>
+          <span>— №5 —</span>
+          <p>большинство едет в гранд каньон и толпится там</p>
+        </div>
       </section>
 
-      <section>
+      <section class="main-form">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
@@ -92,18 +96,20 @@
 
       </section>
 
-      <section>
+      <section class="main-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
         <!-- Здесь будет карта -->
       </section>
 
     </main>
 
-    <footer>
-      <p>#visitSedonaA</p>
-      <p>ТЕЛ: +7(495) 666-01-66</p>
-      <section>
-        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+    <footer class="footer">
+      <div class="footer-contacts">
+        <p><a href="#">#visitSedonaA</a></p>
+        <p>ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+      </div>
+
+      <div class="footer-social">
         <ul>
           <li>
             <a href="">Твиттер</a>
@@ -115,11 +121,12 @@
             <a href="">Ютуб</a>
           </li>
         </ul>
-        <p>
-          Website by
-          <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-        </p>
-      </section>
+      </div>
+
+      <div>
+        Website by
+        <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      </div>
 
     </footer>
 
