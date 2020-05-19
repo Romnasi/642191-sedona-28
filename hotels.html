@@ -24,8 +24,73 @@
       <h1 class="visually-hidden">Гостиницы в Седоне</h1>
       <section class="hotels-filter">
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
-        <!-- Здесь будет фильтр сверстанный через форму -->
+        <form class="hotels-filter-form" action="https://echo.htmlacademy.ru" method="post">
+
+          <fieldset class="fields-infrastructure">
+            <legend>Инфраструктура:</legend>
+            <p>
+              <input id="pool" type="checkbox" name="infrastructure" value="pool" checked>
+              <label for="pool">Бассейн</label>
+            </p>
+            <p>
+              <input id="parking" type="checkbox" name="infrastructure" value="parking">
+              <label for="parking">Парковка</label>
+            </p>
+            <p>
+              <input id="wi-fi" type="checkbox" name="infrastructure" value="wi-fi">
+              <label for="wi-fi">Wi-fi</label>
+            </p>
+          </fieldset>
+
+          <fieldset class="fields-type-hotel">
+            <legend>Тип жилья</legend>
+            <p>
+              <input id="hotel" type="checkbox" name="type-hotel" value="hotel" checked>
+              <label for="hotel">Гостиница</label>
+            </p>
+            <p>
+              <input id="motel" type="checkbox" name="type-hotel" value="motel" checked>
+              <label for="motel">Мотель</label>
+            </p>
+            <p>
+              <input id="apartments" type="checkbox" name="type-hotel" value="apartments" checked>
+              <label for="apartments">Апартаменты</label>
+            </p>
+          </fieldset>
+
+          <fieldset class="price-per-day">
+            <legend>Стоимость в сутки (р):</legend>
+            <input id="min-price" type="number" name="min-price" value="" placeholder="от 0" min="0">
+            <input id="max-price" type="number" name="max-price" value="" placeholder="до 3000">
+            <div class="range-slider-track">
+              <div class="range-slider-pin range-slider-pin-min"></div>
+              <div class="range-slider-pin range-slider-pin-max"></div>
+            </div>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
+
+      <div class="hotels-sort">
+        <p>Найдено: <span>3</span></p>
+        <ul>
+          <li>
+            <a>по цене</a>
+          </li>
+          <li>
+            <a href="#">по типу</a>
+          </li>
+          <li>
+            <a href="#">по рейтингу</a>
+          </li>
+          <li>
+            <a href="#">по взрастанию</a>
+          </li>
+          <li>
+            <a>по убыванию</a>
+          </li>
+        </ul>
+      </div>
 
       <section class="hotels-list">
         <h2 class="visually-hidden">Стоимость гостиниц в сутки</h2>

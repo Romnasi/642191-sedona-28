@@ -89,16 +89,35 @@
       </section>
 
       <section class="main-form">
-        <h2>Заинтересовались?</h2>
+        <span>Заинтересовались?</span>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-
-        <!-- Здес будет форма -->
-
+        <h2><a href="#">Поиск гостиницы в Седоне</a></h2>
+        <form class="main-form-search" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+            <legend class="visually-hidden">Даты заезда и выезда</legend>
+            <p>
+              <label for="arrival-date">Дата заезда</label>
+              <input type="date" id="arrival-date" name="arrival-date" value="2017-04-24">
+            </p>
+            <p>
+              <label for="date-departure">Дата выезда</label>
+              <input type="date" id="date-departure" name="date-departure" value="2017-07-04">
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend class="visually-hidden">Количество людей</legend>
+            <label for="field-adults">Взрослые</label>
+            <input type="number" id="field-adults" name="field-adults" value="2" min="0">
+            <label for="field-children">Дети</label>
+            <input type="number" id="field-children" name="field-children" value="0" min="0">
+          </fieldset>
+          <button type="number" type="submit">Найти</button>
+        </form>
       </section>
 
       <section class="main-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <!-- Здесь будет карта -->
+        <img src="img/map.png" width="1199" height="594" alt="Карта окрестностей Седоны">
       </section>
 
     </main>
