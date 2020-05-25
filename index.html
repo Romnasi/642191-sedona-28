@@ -98,7 +98,7 @@
             <ul>
               <li>
                 <label for="date-arrival">Дата заезда</label>
-                <input type="date" id="date-arrival" name="date-arrival" value="2017-04-24">
+                <input type="text" id="date-arrival" name="date-arrival" placeholder="24 апреля 2017">
                 <button type="button" name="button">
                   <span class="visually-hidden">Выбрать дату</span>
                   <svg width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,7 +109,7 @@
               </li>
               <li>
                 <label for="date-departure">Дата выезда</label>
-                <input type="date" id="date-departure" name="date-departure" value="2017-07-04">
+                <input type="text" id="date-departure" name="date-departure" placeholder="4 июля 2017">
                 <button type="button" name="button">
                   <span class="visually-hidden">Выбрать дату</span>
                   <svg width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,22 +125,22 @@
             <ul>
               <li>
                 <label for="field-adults">Взрослые</label>
-                <button type="button" class="quantity-arrow-minus">
-                  <span class="visually-hidden">Уменьшить количество</span>
+                <button type="button" class="quantity-button" aria-label="Уменьшить количество">
+                  <span class="quantity-button-text">-</span>
                 </button>
                 <input type="number" id="field-adults" name="field-adults" value="2" min="0">
-                <button type="button" class="quantity-arrow-plus">
-                  <span class="visually-hidden">Увеличить количество</span>
+                <button type="button" class="quantity-button" aria-label="Увеличить количество">
+                  <span class="quantity-button-text">+</span>
                 </button>
               </li>
               <li>
                 <label for="field-children">Дети</label>
-                <button type="button" class="quantity-arrow-minus">
-                  <span class="visually-hidden">Уменьшить количество</span>
+                <button type="button" class="quantity-button" aria-label="Уменьшить количество">
+                  <span class="quantity-button-text">-</span>
                 </button>
                 <input type="number" id="field-children" name="field-children" value="0" min="0">
-                <button type="button" class="quantity-arrow-plus">
-                  <span class="visually-hidden">Увеличить количество</span>
+                <button type="button" class="quantity-button" aria-label="Увеличить количество">
+                  <span class="quantity-button-text">+</span>
                 </button>
               </li>
             </ul>
