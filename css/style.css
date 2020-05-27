@@ -1,0 +1,462 @@
+/* Variables */
+
+:root {
+  --basic-light: #FFFFFF;
+  --basic-light-opacity: rgba(255, 255, 255, 0.3);
+  --basic-black: #000000;
+  --basic-black-opacity: rgba(0, 0, 0, 0.3);
+  --basic-dark: #333333;
+  --basic-blue: #81B3D2;
+  --basic-blue-hover: #669EC0;
+  --basic-blue-active: #5496BD;
+  --basic-gray: #A9A9A9;
+  --basic-light-gray: #EEEEEE;
+  --basic-brown: #766357;
+  --basic-brown-hover: #604E43;
+  --basic-brown-active: #503E33;
+
+  --logo-developer: #231F20;
+  --logo-developer-active: #BDBBBC;
+  --color-checkbox-disabled: #6A6A6A;
+  --input-background: #F2F2F2;
+  --input-background-hover: #EBEBEB;
+  --site-background: #888888;
+  --input-border-focus: #E5E5E5;
+}
+
+/* Visually-hidden */
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Global */
+body {
+  min-width: 1220;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-dark);
+  background-color: var(--site-background)
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* header */
+
+.main-header {
+  min-width: 1200px;
+  background-color: var(--basic-light);
+}
+
+/* Main navigation */
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-style: 400;
+  font-weight: bold;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.site-navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation-current a:not([href]) {
+  color: var(--basic-brown);
+}
+
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover {
+  color: var(--basic-blue);
+}
+
+.site-navigation a:focus {
+  color: var(--basic-black-opacity);
+}
+
+/* Main */
+.container {
+  background-color: var(--basic-light);
+
+}
+
+.main-lead-image {
+  background-color: var(--basic-dark);
+  background-image: url("../img/jagged.svg"), url("../img/background-photo.jpg");
+  background-position: bottom, center;
+  background-repeat: no-repeat;
+}
+
+.main-lead-letters {
+  text-align: center;
+}
+
+.main-lead-text {
+  font-style: 700;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+  text-align: center;
+}
+
+/* Features */
+.features-header h2 {
+  font-size: 14px;
+  line-height: 26px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.features {
+  background-color: var(--basic-blue)
+}
+
+.features-text {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-light)
+}
+
+.features-text h3,
+.main-recommend h3 {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.features-image {
+  background-color: var(--basic-dark);
+}
+
+
+/* main-recommend */
+.main-recommend {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark)
+}
+
+.main-recommend ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Main form */
+.main-form-text {
+  background-color: var(--basic-light);
+  text-align: center;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.main-form-question {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+
+/* button */
+.button {
+  font: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: var(--basic-light);
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button:active {
+  color: var(--basic-light-opacity);
+}
+
+.hidding-form {
+  background-color: var(--basic-brown);
+}
+
+.hidding-form:hover {
+  background-color: var(--basic-brown-hover);
+}
+
+.hidding-form:active {
+  background-color: var(--basic-brown-active);
+}
+
+.main-form-search fieldset {
+  border: none;
+}
+
+.main-form-search ul {
+  list-style: none;
+}
+
+/* Fields */
+.main-form-item label,
+.main-form-item input[type="number"] {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-black)
+}
+
+.main-form-item input[type="number"] {
+  text-align: center;
+}
+
+.main-form-item input {
+  font: inherit;
+  background-color: var(--input-background);
+  border: 2px solid var(--input-background);
+}
+
+.main-form-item input:hover {
+  background-color: var(--input-background-hover);
+  border: 2px solid var(--input-background-hover);
+}
+
+
+.main-form-item input:focus {
+  background-color: var(--basic-light);
+  border: 2px solid var(--input-border-focus);
+}
+
+.main-form-item input::placeholder {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+/* По юзабилити лучше, но в ТЗ нет, оставить? */
+.main-form-item input:focus::placeholder {
+  color: transparent;
+}
+
+
+/* Fields button */
+.main-form-item button {
+  font: inherit;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+}
+
+.find {
+  background-color: var(--basic-blue);
+}
+
+.find:hover {
+  background-color: var(--basic-blue-hover);
+}
+
+.find:active {
+  background-color: var(--basic-blue-active);
+}
+
+
+
+
+/* Main-footer */
+.footer {
+  color: var(--basic-black);
+  background-color: var(--basic-light);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer p {
+  margin-top: inherit;
+}
+
+/* Footer contacts */
+.footer-contacts a,
+.dev-link {
+  color: var(--basic-black);
+}
+
+.footer-contacts a:hover,
+.social-button:hover,
+.dev-link:hover {
+  color: var(--basic-blue);
+}
+
+.footer-contacts a:focus,
+.social-button:focus,
+.dev-link:focus {
+  color: var(--basic-black-opacity);
+}
+
+/* footer-social */
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+/* Social button */
+.social-button {
+  color: inherit;
+  background-color: var(--basic-blue);
+}
+
+.social-button:hover {
+  background-color: var(--basic-blue-hover);
+}
+.social-button:active {
+  background-color: var(--basic-blue-active);
+}
+
+/* footer-developer */
+.footer-developer-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Hotels */
+/* hotels-price */
+.hotels-price {
+  background-color: var(--basic-light);
+}
+
+.hotels-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--input-border-focus);
+}
+
+.hotels-item {
+  border-bottom: 1px solid var(--input-border-focus);
+}
+
+.hotels-name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.hotels-name:hover {
+  color: var(--basic-blue)
+}
+
+.hotels-name:active {
+  color: var(--basic-black-opacity)
+}
+
+.hotels-item-type span,
+.hotels-item-price span {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+
+/* hotels-button */
+.hotels-button {
+  font: inherit;
+  font-size: 14px;
+  line-height: 21px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: var(--basic-light);
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+}
+
+.hotels-button:active {
+  color: var(--basic-light-opacity);
+}
+
+.booking {
+  background-color: var(--basic-brown);
+}
+
+.booking:hover {
+  background-color: var(--basic-brown-hover);
+}
+
+.booking:active {
+  background-color: var(--basic-brown-active);
+}
+
+.more-info {
+  background-color: var(--basic-blue);
+}
+
+.more-info:hover {
+  background-color: var(--basic-blue-hover);
+}
+
+.more-info:active {
+  background-color: var(--basic-blue-active);
+}
+
+/* hotels-stars-list */
+.hotels-stars-list {
+  list-style: none;
+}
+
+/* hotels-review-rating */
+.hotels-review-rating span{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--input-background);
+}
