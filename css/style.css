@@ -97,7 +97,7 @@ img {
   color: var(--basic-blue);
 }
 
-.site-navigation a:focus {
+.site-navigation a:active {
   color: var(--basic-black-opacity);
 }
 
@@ -257,7 +257,6 @@ img {
   background-color: var(--input-background-hover);
   border: 2px solid var(--input-background-hover);
 }
-
 
 .main-form-item input:focus {
   background-color: var(--basic-light);
@@ -421,6 +420,64 @@ img {
 .price-per-day input:focus::placeholder {
   color: transparent;
 }
+
+/* hotels-filter-button */
+.hotels-filter-button {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-light);
+  background-color: transparent;
+  font: inherit;
+  border: 2px solid var(--basic-light);
+  border-radius: 2px;
+}
+
+/* hotels-sort */
+.hotels-sort p{
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.hotels-sort h2 {
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  font-weight: normal;
+}
+
+.hotels-sort-wrapper,
+.hotels-sort-quantity {
+  list-style: none;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.hotels-sort-wrapper a {
+  color: var(--basic-black-opacity);
+  border-bottom: 1px dashed var(--basic-blue);
+}
+
+.hotels-sort-wrapper a:hover {
+  color: var(--basic-blue);
+}
+
+.hotels-sort-wrapper a:active {
+  color: var(--basic-black);
+  border: none;
+}
+
+.sort-current a:not([href]) {
+  color: var(--basic-blue);
+  border: none;
+}
+
 
 /* hotels-price */
 .hotels-price {
