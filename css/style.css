@@ -140,6 +140,7 @@ img {
 
 .features-last {
   background-color: var(--basic-light-gray);
+  border: 1px solid transparent;
 }
 
 .features-text {
@@ -307,10 +308,7 @@ img {
   background-color: var(--basic-light);
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.footer p {
-  margin-top: inherit;
+  border: 1px solid transparent;
 }
 
 /* Footer contacts */
