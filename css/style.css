@@ -141,6 +141,10 @@ img {
   background-color: var(--basic-blue)
 }
 
+.features-last {
+  background-color: var(--basic-light-gray);
+}
+
 .features-text {
   text-align: center;
   text-transform: uppercase;
@@ -148,7 +152,8 @@ img {
 }
 
 .features-text h3,
-.main-recommend h3 {
+.main-recommend h3,
+.features-last h3 {
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
@@ -160,7 +165,8 @@ img {
 
 
 /* main-recommend */
-.main-recommend {
+.main-recommend,
+.features-last .features-text {
   text-align: center;
   text-transform: uppercase;
   color: var(--basic-dark)
