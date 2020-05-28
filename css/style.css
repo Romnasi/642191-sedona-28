@@ -112,9 +112,6 @@ img {
   background-image: url("../img/jagged.svg"), url("../img/background-photo.jpg");
   background-position: bottom, center;
   background-repeat: no-repeat;
-}
-
-.main-lead-letters {
   text-align: center;
 }
 
@@ -267,6 +264,7 @@ img {
   border: 2px solid var(--input-border-focus);
 }
 
+
 .main-form-item input::placeholder {
   font-size: 14px;
   line-height: 18px;
@@ -276,7 +274,6 @@ img {
   color: var(--basic-black);
 }
 
-/* По юзабилити лучше, но в ТЗ нет, оставить? */
 .main-form-item input:focus::placeholder {
   color: transparent;
 }
@@ -348,6 +345,8 @@ img {
 .social-button {
   color: inherit;
   background-color: var(--basic-blue);
+  text-align: center;
+  vertical-align: middle;
 }
 
 .social-button:hover {
@@ -367,7 +366,62 @@ img {
   text-transform: uppercase;
 }
 
+
 /* Hotels */
+
+/* hotels-filter */
+.hotels-filter {
+  background-image: url('../img/hotels-background.jpg');
+  background-repeat: no-repeat;
+  background-color: var(--basic-dark);
+  background-position: center;
+}
+
+.hotels-filter-form {
+  color: var(--basic-light)
+}
+
+.hotels-filter-form fieldset {
+  border: none;
+}
+
+.fields-infrastructure legend,
+.fields-type-hotel legend,
+.price-per-day legend {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.fields-infrastructure ul,
+.fields-type-hotel ul,
+.price-per-day ul {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+/* fields */
+.price-per-day input {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--basic-light);
+  background-color: transparent;
+  border: 2px solid var(--basic-light);
+  border-radius: 2px;
+}
+
+.price-per-day input::placeholder {
+  color: black;
+  text-transform: uppercase;
+  color: var(--basic-light);
+}
+
+.price-per-day input:focus::placeholder {
+  color: transparent;
+}
+
 /* hotels-price */
 .hotels-price {
   background-color: var(--basic-light);
