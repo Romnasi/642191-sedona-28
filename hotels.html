@@ -31,7 +31,7 @@
 
           <fieldset class="fields-infrastructure">
             <legend>Инфраструктура:</legend>
-            <ul>
+            <ul class="fields-infrastructure-list">
               <li>
                 <input id="pool" type="checkbox" name="pool" checked>
                 <label for="pool">Бассейн</label>
@@ -49,7 +49,7 @@
 
           <fieldset class="fields-type-hotel">
             <legend>Тип жилья</legend>
-            <ul>
+            <ul class="fields-type-list">
               <li>
                 <input id="hotel" type="checkbox" name="hotel" checked>
                 <label for="hotel">Гостиница</label>
@@ -65,37 +65,39 @@
             </ul>
           </fieldset>
 
-          <fieldset class="price-per-day">
-            <legend>Стоимость в сутки (р):</legend>
-            <ul>
-              <li>
-                <label class="visually-hidden" for="min-price">Минимальная стоимость гостиницы</label>
-                <input id="min-price" type="number" name="min-price" value="0" step="100" placeholder="от 0" min="0">
-              </li>
-              <li>
-                <label class="visually-hidden" for="max-price">Максимальная стоимость гостиницы</label>
-                <input id="max-price" type="number" name="max-price" value="3000" step="100" placeholder="до 3000">
-              </li>
-            </ul>
+          <div class="price-fields-wrapper">
+            <fieldset class="price-per-day">
+              <legend>Стоимость в сутки (р):</legend>
+              <ul class="price-fields-list">
+                <li>
+                  <label class="visually-hidden" for="min-price">Минимальная стоимость гостиницы</label>
+                  <input id="min-price" type="number" name="min-price" value="0" step="100" placeholder="от 0" min="0">
+                </li>
+                <li>
+                  <label class="visually-hidden" for="max-price">Максимальная стоимость гостиницы</label>
+                  <input id="max-price" type="number" name="max-price" value="3000" step="100" placeholder="до 3000">
+                </li>
+              </ul>
 
-            <div class="range-slider-track">
-              <div class="range-slider-pin range-slider-pin-min">
-                <svg width="19" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity=".3" d="M9.5 19.09c-5.247 0-9.5-4.274-9.5-9.545v1.91C0 16.724 4.253 21 9.5 21c5.246 0 9.5-4.274 9.5-9.546V9.545c0 5.271-4.254 9.546-9.5 9.546z" fill="#ABABAB"/>
-                  <path d="M9.5 19.09c5.247 0 9.5-4.273 9.5-9.545C19 4.274 14.747 0 9.5 0S0 4.274 0 9.545c0 5.272 4.253 9.546 9.5 9.546z" fill="#fff"/>
-                  <path d="M9.5 11.454c1.05 0 1.9-.854 1.9-1.909 0-1.054-.85-1.909-1.9-1.909-1.05 0-1.9.855-1.9 1.91 0 1.054.85 1.909 1.9 1.909z" fill="#ABABAB"/>
-                </svg>
+              <div class="range-slider-track">
+                <div class="range-slider-pin range-slider-pin-min">
+                  <svg width="19" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity=".3" d="M9.5 19.09c-5.247 0-9.5-4.274-9.5-9.545v1.91C0 16.724 4.253 21 9.5 21c5.246 0 9.5-4.274 9.5-9.546V9.545c0 5.271-4.254 9.546-9.5 9.546z" fill="#ABABAB"/>
+                    <path d="M9.5 19.09c5.247 0 9.5-4.273 9.5-9.545C19 4.274 14.747 0 9.5 0S0 4.274 0 9.545c0 5.272 4.253 9.546 9.5 9.546z" fill="#fff"/>
+                    <path d="M9.5 11.454c1.05 0 1.9-.854 1.9-1.909 0-1.054-.85-1.909-1.9-1.909-1.05 0-1.9.855-1.9 1.91 0 1.054.85 1.909 1.9 1.909z" fill="#ABABAB"/>
+                  </svg>
+                </div>
+                <div class="range-slider-pin range-slider-pin-max">
+                  <svg width="19" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity=".3" d="M9.5 19.09c-5.247 0-9.5-4.274-9.5-9.545v1.91C0 16.724 4.253 21 9.5 21c5.246 0 9.5-4.274 9.5-9.546V9.545c0 5.271-4.254 9.546-9.5 9.546z" fill="#ABABAB"/>
+                    <path d="M9.5 19.09c5.247 0 9.5-4.273 9.5-9.545C19 4.274 14.747 0 9.5 0S0 4.274 0 9.545c0 5.272 4.253 9.546 9.5 9.546z" fill="#fff"/>
+                    <path d="M9.5 11.454c1.05 0 1.9-.854 1.9-1.909 0-1.054-.85-1.909-1.9-1.909-1.05 0-1.9.855-1.9 1.91 0 1.054.85 1.909 1.9 1.909z" fill="#ABABAB"/>
+                  </svg>
+                </div>
               </div>
-              <div class="range-slider-pin range-slider-pin-max">
-                <svg width="19" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity=".3" d="M9.5 19.09c-5.247 0-9.5-4.274-9.5-9.545v1.91C0 16.724 4.253 21 9.5 21c5.246 0 9.5-4.274 9.5-9.546V9.545c0 5.271-4.254 9.546-9.5 9.546z" fill="#ABABAB"/>
-                  <path d="M9.5 19.09c5.247 0 9.5-4.273 9.5-9.545C19 4.274 14.747 0 9.5 0S0 4.274 0 9.545c0 5.272 4.253 9.546 9.5 9.546z" fill="#fff"/>
-                  <path d="M9.5 11.454c1.05 0 1.9-.854 1.9-1.909 0-1.054-.85-1.909-1.9-1.909-1.05 0-1.9.855-1.9 1.91 0 1.054.85 1.909 1.9 1.909z" fill="#ABABAB"/>
-                </svg>
-              </div>
-            </div>
-          </fieldset>
-          <button class="hotels-filter-button" type="submit">Показать</button>
+            </fieldset>
+            <button class="hotels-filter-button" type="submit">Показать</button>
+          </div>
         </form>
       </section>
 
