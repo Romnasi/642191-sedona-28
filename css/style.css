@@ -98,10 +98,10 @@ img {
   align-items: center;
   flex-wrap: wrap;
 
-  padding-left: 72px;
-  padding-right: 72px;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding-left: 73px;
+  padding-right: 73px;
+  padding-top: 14px;
+  padding-bottom: 16px;
 
   font-size: 14px;
   line-height: 26px;
@@ -114,6 +114,7 @@ img {
 
 .main-header-logo {
   position: absolute;
+  top: 0px;
 
   width: 138px;
   height: 70px;
