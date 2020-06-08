@@ -55,15 +55,15 @@
         <h2 class="visually-hidden">Рекомендуем</h2>
         <ul class="recommend-list">
           <li>
-            <h3>Жильё</h3>
+            <h3 class="header-housing">Жильё</h3>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li>
-            <h3>Еда</h3>
+            <h3 class="header-food">Еда</h3>
             <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li>
-            <h3>Сувениры</h3>
+            <h3 class="header-souvenirs">Сувениры</h3>
             <p>Не только китайского, но и местного производства!</p>
           </li>
         </ul>
@@ -84,17 +84,17 @@
         <div class="features-text">
           <h3>Небольшая площадь</h3>
           <span>— №3 —</span>
-          <p>все достопримечательности находятся очень близко</p>
+          <p>все достопримечательности<br> находятся очень близко</p>
         </div>
         <div class="features-text">
           <h3>Красивая дорога</h3>
           <span>— №4 —</span>
-          <p>ехать в седону из Лас-Вегаса совсем не скучно!</p>
+          <p>ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</p>
         </div>
         <div class="features-text">
           <h3>Мало туристов</h3>
           <span>— №5 —</span>
-          <p>большинство едет в гранд каньон и толпится там</p>
+          <p>большинство едет в&nbsp;Гранд каньон и&nbsp;толпится там</p>
         </div>
       </section>
 
@@ -103,7 +103,7 @@
         <div class="main-form-text">
           <span class="main-form-question">Заинтересовались?</span>
           <p>
-            Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+            Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
           <button class="button hidding-form" type="button"><span>Поиск гостиницы в Седоне</span></button>
         </div>
@@ -113,26 +113,30 @@
             <legend class="visually-hidden">Даты заезда и выезда</legend>
             <ul class="date-form-list">
               <li class="main-form-item">
-                <label for="date-arrival">Дата заезда</label>
-                <input type="text" id="date-arrival" name="date-arrival" placeholder="24 апреля 2017">
-                <button type="button" name="button">
-                  <span class="visually-hidden">Выбрать дату</span>
-                  <svg width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.025h2.845c.966 0 1.749.822 1.749 1.837v16.302C21 22.179 20.217 23 19.251 23H1.75C.784 23 0 22.179 0 21.164V4.862c0-1.015.784-1.837 1.75-1.837h2.843V1.648c0-.381.294-.689.657-.689.362 0 .656.308.656.689v1.377h3.938V1.648c0-.381.294-.689.657-.689.361 0 .655.308.655.689v1.377h3.938V1.648c0-.381.293-.689.656-.689.362 0 .656.308.656.689v1.377zm3.159 18.459a.448.448 0 00.123-.32h.001V4.862a.449.449 0 00-.437-.459h-2.845v1.378c0 .381-.294.689-.656.689-.363 0-.656-.308-.656-.689V4.403h-3.938v1.378c0 .381-.294.689-.655.689-.363 0-.657-.308-.657-.689V4.403H5.907v1.378c0 .381-.294.689-.656.689-.363 0-.657-.308-.657-.689V4.403H1.75a.45.45 0 00-.438.459v16.302a.45.45 0 00.438.459h17.501a.448.448 0 00.314-.139z" fill="#A9A9A9"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.594 9.225h2.625v2.066H4.594V9.225zm0 3.443h2.625v2.067H4.594v-2.067zm2.625 3.444H4.594v2.066h2.625v-2.066zm1.969 0h2.625v2.066H9.188v-2.066zm2.625-3.444H9.188v2.067h2.625v-2.067zM9.188 9.225h2.625v2.066H9.188V9.225zm7.218 6.887h-2.625v2.066h2.625v-2.066zm-2.625-3.444h2.625v2.067h-2.625v-2.067zm2.625-3.443h-2.625v2.066h2.625V9.225z" fill="#A9A9A9"/>
-                  </svg>
-                </button>
+                <label for="date-arrival">Дата заезда:</label>
+                <div class="date-arrival-wrapper">
+                  <input type="text" id="date-arrival" name="date-arrival" placeholder="24 апреля 2017">
+                  <button class="button-calendar" type="button">
+                    <span class="visually-hidden">Выбрать дату</span>
+                    <svg width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.025h2.845c.966 0 1.749.822 1.749 1.837v16.302C21 22.179 20.217 23 19.251 23H1.75C.784 23 0 22.179 0 21.164V4.862c0-1.015.784-1.837 1.75-1.837h2.843V1.648c0-.381.294-.689.657-.689.362 0 .656.308.656.689v1.377h3.938V1.648c0-.381.294-.689.657-.689.361 0 .655.308.655.689v1.377h3.938V1.648c0-.381.293-.689.656-.689.362 0 .656.308.656.689v1.377zm3.159 18.459a.448.448 0 00.123-.32h.001V4.862a.449.449 0 00-.437-.459h-2.845v1.378c0 .381-.294.689-.656.689-.363 0-.656-.308-.656-.689V4.403h-3.938v1.378c0 .381-.294.689-.655.689-.363 0-.657-.308-.657-.689V4.403H5.907v1.378c0 .381-.294.689-.656.689-.363 0-.657-.308-.657-.689V4.403H1.75a.45.45 0 00-.438.459v16.302a.45.45 0 00.438.459h17.501a.448.448 0 00.314-.139z" fill="#A9A9A9"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.594 9.225h2.625v2.066H4.594V9.225zm0 3.443h2.625v2.067H4.594v-2.067zm2.625 3.444H4.594v2.066h2.625v-2.066zm1.969 0h2.625v2.066H9.188v-2.066zm2.625-3.444H9.188v2.067h2.625v-2.067zM9.188 9.225h2.625v2.066H9.188V9.225zm7.218 6.887h-2.625v2.066h2.625v-2.066zm-2.625-3.444h2.625v2.067h-2.625v-2.067zm2.625-3.443h-2.625v2.066h2.625V9.225z" fill="#A9A9A9"/>
+                    </svg>
+                  </button>
+                </div>
               </li>
               <li class="main-form-item">
-                <label for="date-departure">Дата выезда</label>
-                <input type="text" id="date-departure" name="date-departure" placeholder="4 июля 2017">
-                <button type="button" name="button">
-                  <span class="visually-hidden">Выбрать дату</span>
-                  <svg width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.025h2.845c.966 0 1.749.822 1.749 1.837v16.302C21 22.179 20.217 23 19.251 23H1.75C.784 23 0 22.179 0 21.164V4.862c0-1.015.784-1.837 1.75-1.837h2.843V1.648c0-.381.294-.689.657-.689.362 0 .656.308.656.689v1.377h3.938V1.648c0-.381.294-.689.657-.689.361 0 .655.308.655.689v1.377h3.938V1.648c0-.381.293-.689.656-.689.362 0 .656.308.656.689v1.377zm3.159 18.459a.448.448 0 00.123-.32h.001V4.862a.449.449 0 00-.437-.459h-2.845v1.378c0 .381-.294.689-.656.689-.363 0-.656-.308-.656-.689V4.403h-3.938v1.378c0 .381-.294.689-.655.689-.363 0-.657-.308-.657-.689V4.403H5.907v1.378c0 .381-.294.689-.656.689-.363 0-.657-.308-.657-.689V4.403H1.75a.45.45 0 00-.438.459v16.302a.45.45 0 00.438.459h17.501a.448.448 0 00.314-.139z" fill="#A9A9A9"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.594 9.225h2.625v2.066H4.594V9.225zm0 3.443h2.625v2.067H4.594v-2.067zm2.625 3.444H4.594v2.066h2.625v-2.066zm1.969 0h2.625v2.066H9.188v-2.066zm2.625-3.444H9.188v2.067h2.625v-2.067zM9.188 9.225h2.625v2.066H9.188V9.225zm7.218 6.887h-2.625v2.066h2.625v-2.066zm-2.625-3.444h2.625v2.067h-2.625v-2.067zm2.625-3.443h-2.625v2.066h2.625V9.225z" fill="#A9A9A9"/>
-                  </svg>
-                </button>
+                <label for="date-departure">Дата выезда:</label>
+                <div class="date-departure-wrapper">
+                  <input type="text" id="date-departure" name="date-departure" placeholder="4 июля 2017">
+                  <button class="button-calendar" type="button">
+                    <span class="visually-hidden">Выбрать дату</span>
+                    <svg width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.025h2.845c.966 0 1.749.822 1.749 1.837v16.302C21 22.179 20.217 23 19.251 23H1.75C.784 23 0 22.179 0 21.164V4.862c0-1.015.784-1.837 1.75-1.837h2.843V1.648c0-.381.294-.689.657-.689.362 0 .656.308.656.689v1.377h3.938V1.648c0-.381.294-.689.657-.689.361 0 .655.308.655.689v1.377h3.938V1.648c0-.381.293-.689.656-.689.362 0 .656.308.656.689v1.377zm3.159 18.459a.448.448 0 00.123-.32h.001V4.862a.449.449 0 00-.437-.459h-2.845v1.378c0 .381-.294.689-.656.689-.363 0-.656-.308-.656-.689V4.403h-3.938v1.378c0 .381-.294.689-.655.689-.363 0-.657-.308-.657-.689V4.403H5.907v1.378c0 .381-.294.689-.656.689-.363 0-.657-.308-.657-.689V4.403H1.75a.45.45 0 00-.438.459v16.302a.45.45 0 00.438.459h17.501a.448.448 0 00.314-.139z" fill="#A9A9A9"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.594 9.225h2.625v2.066H4.594V9.225zm0 3.443h2.625v2.067H4.594v-2.067zm2.625 3.444H4.594v2.066h2.625v-2.066zm1.969 0h2.625v2.066H9.188v-2.066zm2.625-3.444H9.188v2.067h2.625v-2.067zM9.188 9.225h2.625v2.066H9.188V9.225zm7.218 6.887h-2.625v2.066h2.625v-2.066zm-2.625-3.444h2.625v2.067h-2.625v-2.067zm2.625-3.443h-2.625v2.066h2.625V9.225z" fill="#A9A9A9"/>
+                    </svg>
+                  </button>
+                </div>
               </li>
             </ul>
           </fieldset>
@@ -140,24 +144,40 @@
             <legend class="visually-hidden">Количество людей</legend>
             <ul class="quantity-form-list">
               <li class="main-form-item">
-                <label for="field-adults">Взрослые</label>
-                <button type="button" class="quantity-button" aria-label="Уменьшить количество">
-                  <span class="quantity-button-text">-</span>
-                </button>
-                <input type="number" id="field-adults" name="field-adults" value="2" min="0">
-                <button type="button" class="quantity-button" aria-label="Увеличить количество">
-                  <span class="quantity-button-text">+</span>
-                </button>
+                <label for="field-adults">Взрослые:</label>
+                <div class="field-adults-wrapper">
+                  <button type="button" class="quantity-button button-minus">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                    <svg preserveAspectRatio="xMidYMid" width="12" height="3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#A9A9A9" d="M0 0h12v3H0z"/>
+                    </svg>
+                  </button>
+                  <input type="number" id="field-adults" name="field-adults" value="2" min="0">
+                  <button type="button" class="quantity-button button-plus">
+                    <span class="visually-hidden">Увеличить количество</span>
+                    <svg width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23 6.77V11h2.54V6.77H11V4.23H6.77V0H4.23v4.23H0v2.54h4.23z" fill="#A9A9A9"/>
+                    </svg>
+                  </button>
+                </div>
               </li>
               <li class="main-form-item">
-                <label for="field-children">Дети</label>
-                <button type="button" class="quantity-button" aria-label="Уменьшить количество">
-                  <span class="quantity-button-text">-</span>
-                </button>
-                <input type="number" id="field-children" name="field-children" value="0" min="0">
-                <button type="button" class="quantity-button" aria-label="Увеличить количество">
-                  <span class="quantity-button-text">+</span>
-                </button>
+                <label class="children" for="field-children">Дети:</label>
+                <div class="field-children-wrapper">
+                  <button type="button" class="quantity-button button-minus">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                    <svg width="12" height="3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#A9A9A9" d="M0 0h12v3H0z"/>
+                    </svg>
+                  </button>
+                  <input type="number" id="field-children" name="field-children" value="0" min="0">
+                  <button type="button" class="quantity-button button-plus">
+                    <span class="visually-hidden">Увеличить количество</span>
+                    <svg width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23 6.77V11h2.54V6.77H11V4.23H6.77V0H4.23v4.23H0v2.54h4.23z" fill="#A9A9A9"/>
+                    </svg>
+                  </button>
+                </div>
               </li>
             </ul>
           </fieldset>
@@ -172,7 +192,7 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer main-footer">
       <div class="footer-contacts">
         <p><a href="#">#visitSedona</a></p>
         <p>ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
