@@ -739,9 +739,16 @@ label.children {
 }
 
 .footer-contacts a:hover,
-.social-button:hover,
 .dev-link:hover {
   color: var(--basic-blue);
+}
+
+.social-button:hover {
+  background-color: var(--basic-blue-hover);
+}
+
+.social-button:active path {
+  opacity: 0.3;
 }
 
 .footer-contacts a:focus,
@@ -849,6 +856,10 @@ label.children {
   margin-right: auto;
 }
 
+fieldset.price-per-day {
+  margin-bottom: 23px;
+}
+
 .fields-infrastructure legend,
 .fields-type-hotel legend,
 .price-per-day legend {
@@ -875,6 +886,22 @@ label.children {
   text-transform: uppercase;
 }
 
+/* range-slider */
+.range-slider-track {
+  width: 316px;
+  height: 42px;
+
+  padding-top: 20px;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.scale {
+  width: 316px;
+  height: 2px;
+  background-color: var(--basic-light-opacity)
+}
+
+
 /* fields */
 .fields-infrastructure-list li:not(:last-child),
 .fields-type-list li:not(:last-child) {
@@ -892,8 +919,9 @@ label.children {
   padding: 0;
 }
 
-.price-fields-list {
+.price-per-day .price-fields-list {
   display: flex;
+  margin-bottom: 11px;
 }
 
 
