@@ -33,15 +33,15 @@
             <legend>Инфраструктура:</legend>
             <ul class="fields-infrastructure-list">
               <li>
-                <input id="pool" type="checkbox" name="pool" checked>
+                <input class="visually-hidden filter-input-checkbox" id="pool" type="checkbox" name="pool" checked>
                 <label for="pool">Бассейн</label>
               </li>
               <li>
-                <input id="parking" type="checkbox" name="parking">
+                <input class="visually-hidden filter-input-checkbox" id="parking" type="checkbox" name="parking">
                 <label for="parking">Парковка</label>
               </li>
               <li>
-                <input id="wi-fi" type="checkbox" name="wi-fi">
+                <input class="visually-hidden filter-input-checkbox" disabled id="wi-fi" type="checkbox" name="wi-fi">
                 <label for="wi-fi">Wi-fi</label>
               </li>
             </ul>
@@ -51,15 +51,15 @@
             <legend>Тип жилья</legend>
             <ul class="fields-type-list">
               <li>
-                <input id="hotel" type="checkbox" name="hotel" checked>
+                <input class="visually-hidden filter-input-checkbox" id="hotel" type="checkbox" name="hotel" checked>
                 <label for="hotel">Гостиница</label>
               </li>
               <li>
-                <input id="motel" type="checkbox" name="motel" checked>
+                <input class="visually-hidden filter-input-checkbox" id="motel" type="checkbox" name="motel" checked>
                 <label for="motel">Мотель</label>
               </li>
               <li>
-                <input id="apartments" type="checkbox" name="apartments" checked>
+                <input class="visually-hidden filter-input-checkbox" disabled id="apartments" type="checkbox" name="apartments" checked>
                 <label for="apartments">Апартаменты</label>
               </li>
             </ul>
@@ -70,19 +70,19 @@
               <legend>Стоимость в сутки (р):</legend>
               <ul class="price-fields-list">
                 <li>
-                  <label class="visually-hidden" for="min-price">Минимальная стоимость гостиницы</label>
-                  <input id="min-price" type="number" name="min-price" value="0" step="100" placeholder="от 0" min="0">
+                  <label class="visually-hidden" for="min-price">Минимальная стоимость гостиницы в сутки</label>
+                  <input id="min-price" type="number" name="min-price" step="100" placeholder="от 0" min="0">
                 </li>
                 <li>
-                  <label class="visually-hidden" for="max-price">Максимальная стоимость гостиницы</label>
-                  <input id="max-price" type="number" name="max-price" value="3000" step="100" placeholder="до 3000">
+                  <label class="visually-hidden" for="max-price">Максимальная стоимость гостиницы в сутки</label>
+                  <input id="max-price" type="number" name="max-price" tep="100" placeholder="до 3000">
                 </li>
               </ul>
 
               <div class="range-slider-track">
                 <div class="scale">
                   <div class="bar" style="
-                    width: 85%;
+                    width: 80%;
                     margin-left: 0%;
                   "></div>
                 </div>
@@ -96,7 +96,7 @@
                   </svg>
                 </div>
                 <div class="pin pin-max" tabindex="0" style="
-                  left: 85%
+                  left: 80%
                 ">
                   <svg viewBox="0 0 19 21" width="19" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path opacity=".3" d="M9.5 19.09c-5.247 0-9.5-4.274-9.5-9.545v1.91C0 16.724 4.253 21 9.5 21c5.246 0 9.5-4.274 9.5-9.546V9.545c0 5.271-4.254 9.546-9.5 9.546z" fill="#ABABAB"/>
@@ -167,29 +167,29 @@
               <div class="hotels-stars-rating">
                 <h4 class="visually-hidden">«Звездная» классификация жилья</h4>
                 <ul class="hotels-stars-list">
-                  <li>
-                    <svg role="img" aria-label="5 звезд из 5" width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z" fill="#81B3D2"/>
+                  <li class="hotels-star">
+                    <svg role="img" aria-label="4 звезды из 5" width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z"/>
+                    </svg>
+                  </li>
+                  <li class="hotels-star">
+                    <svg width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z"/>
+                    </svg>
+                  </li>
+                  <li class="hotels-star">
+                    <svg width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z"/>
+                    </svg>
+                  </li>
+                  <li class="hotels-star">
+                    <svg width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z"/>
                     </svg>
                   </li>
                   <li>
                     <svg width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z" fill="#81B3D2"/>
-                    </svg>
-                  </li>
-                  <li>
-                    <svg width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z" fill="#81B3D2"/>
-                    </svg>
-                  </li>
-                  <li>
-                    <svg width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z" fill="#81B3D2"/>
-                    </svg>
-                  </li>
-                  <li>
-                    <svg width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z" fill="#81B3D2"/>
+                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z"/>
                     </svg>
                   </li>
                 </ul>
@@ -219,19 +219,19 @@
               <div class="hotels-stars-rating">
                 <h4 class="visually-hidden">«Звездная» классификация жилья</h4>
                 <ul class="hotels-stars-list">
-                  <li>
+                  <li class="hotels-star">
                     <svg role="img" aria-label="3 звезды из 5" width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z" fill="#81B3D2"/>
+                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z"/>
                     </svg>
                   </li>
-                  <li>
+                  <li class="hotels-star">
                     <svg width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z" fill="#81B3D2"/>
+                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z"/>
                     </svg>
                   </li>
-                  <li>
+                  <li class="hotels-star">
                     <svg width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z" fill="#81B3D2"/>
+                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z"/>
                     </svg>
                   </li>
                   <li>
@@ -271,14 +271,14 @@
               <div class="hotels-stars-rating">
                 <h4 class="visually-hidden">«Звездная» классификация жилья</h4>
                 <ul class="hotels-stars-list">
-                  <li>
+                  <li class="hotels-star">
                     <svg role="img" aria-label="2 звезды из 5" width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z" fill="#81B3D2"/>
+                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z"/>
                     </svg>
                   </li>
-                  <li>
+                  <li class="hotels-star">
                     <svg width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z" fill="#81B3D2"/>
+                      <path d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878L9.002 0z"/>
                     </svg>
                   </li>
                   <li>
