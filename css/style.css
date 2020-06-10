@@ -20,7 +20,7 @@
   --color-checkbox-disabled: #6A6A6A;
   --input-background: #F2F2F2;
   --input-background-hover: #EBEBEB;
-  --site-background: #888888;
+  --site-background: #F2F2F2;
   --input-border-focus: #E5E5E5;
   --shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
   --shadow-form: 0px 7px 15px rgba(0, 1, 1, 0.15);
@@ -79,7 +79,7 @@ img {
     ". header ."
     ". main ."
     ". footer .";
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: min-content min-content min-content;
 }
 
 
@@ -121,16 +121,17 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
+  box-sizing: border-box;
   width: 100%;
 
+
   list-style: none;
-  padding: 0;
+  padding: 5px 62px;
   margin: 0;
 }
 
 .site-navigation li:nth-child(2) {
-  margin-right: 267px;
+  margin-right: 274px;
 }
 
 .site-navigation-current a:not([href]) {
@@ -139,7 +140,9 @@ img {
 
 .site-navigation a {
   display: block;
-  padding: 15px 72px;
+  padding: 10px;
+
+
   color: var(--basic-black);
 }
 
@@ -638,6 +641,18 @@ label.children {
   margin-top: -18px;
 }
 
+.button-calendar:hover path,
+.button-minus:hover path,
+.button-plus:hover path {
+  fill: var(--basic-black);
+}
+
+.button-calendar:active path,
+.button-minus:active path,
+.button-plus:active path {
+  fill: var(--basic-blue);
+}
+
 .main-form-item .quantity-button {
   position: absolute;
 
@@ -730,13 +745,11 @@ label.children {
   margin-bottom: 13px;
 }
 
-.footer-contacts a,
-.dev-link {
+.footer-contacts a {
   color: var(--basic-black);
 }
 
-.footer-contacts a:hover,
-.dev-link:hover {
+.footer-contacts a:hover {
   color: var(--basic-blue);
 }
 
@@ -752,6 +765,18 @@ label.children {
 .social-button:focus,
 .dev-link:focus {
   color: var(--basic-black-opacity);
+}
+
+.dev-link path {
+  fill: var(--logo-developer);
+}
+
+.dev-link:hover path {
+  fill: var(--basic-blue);
+}
+
+.dev-link:active path {
+  fill: var(--logo-developer-active);
 }
 
 /* footer-social */
@@ -885,6 +910,9 @@ fieldset.price-per-day {
 
 /* range-slider */
 .range-slider-track {
+  position: relative;
+
+  box-sizing: border-box;
   width: 316px;
   height: 42px;
 
@@ -894,9 +922,35 @@ fieldset.price-per-day {
 .scale {
   width: 316px;
   height: 2px;
-  background-color: var(--basic-light-opacity)
+  background-color: var(--basic-light-opacity);
 }
 
+.range-slider-track .bar {
+  width: 85%;
+  height: 2px;
+  background-color: var(--basic-light);
+}
+
+.pin {
+  position: absolute;
+  top: 50%;
+
+  width: 19px;
+  height: 21px;
+
+  margin-top: -9px;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.pin-min {
+  left: 0;
+}
+
+.pin-max {
+  left: 252px;
+}
 
 /* fields */
 .fields-infrastructure-list li:not(:last-child),
@@ -1012,6 +1066,17 @@ fieldset.price-per-day {
   align-self: flex-end;
 }
 
+.ascending:hover path,
+.descending:hover path
+ {
+  fill: var(--basic-black);
+}
+
+.ascending:active path,
+.descending:active path {
+  fill: var(--basic-blue);
+}
+
 .hotels-sort-wrapper li:not(:last-child) {
   margin-right: 32px;
 }
@@ -1022,7 +1087,7 @@ fieldset.price-per-day {
 
 .hotels-sort-wrapper a {
   color: var(--basic-black-opacity);
-  border-bottom: 1px dashed var(--basic-blue);
+  border-bottom: 1px dotted var(--basic-blue);
 }
 
 .hotels-sort-wrapper a:hover {
