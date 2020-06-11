@@ -79,7 +79,7 @@ img {
     ". header ."
     ". main ."
     ". footer .";
-  grid-template-rows: min-content min-content min-content;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 
@@ -118,20 +118,48 @@ img {
 }
 
 .site-navigation {
-  display: flex;
-  flex-wrap: wrap;
+
+  display: grid;
   justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
   box-sizing: border-box;
   width: 100%;
 
-
   list-style: none;
-  padding: 5px 62px;
+  padding: 0;
   margin: 0;
 }
 
+.site-navigation li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.site-navigation li:nth-child(1) {
+  padding-left: 72px;
+  text-align: left;
+}
+
 .site-navigation li:nth-child(2) {
-  margin-right: 274px;
+  padding-left: 100px;
+  text-align: left;
+}
+
+
+.site-navigation li:nth-child(3) {
+  grid-column-start: 5;
+  padding-left: 0;
+  padding-right: 100px;
+  text-align: right;
+}
+
+.site-navigation li:nth-child(4) {
+  padding-left: 0;
+  padding-right: 72px;
+  text-align: right;
 }
 
 .site-navigation-current a:not([href]) {
@@ -140,9 +168,6 @@ img {
 
 .site-navigation a {
   display: block;
-  padding: 10px;
-
-
   color: var(--basic-black);
 }
 
@@ -546,12 +571,26 @@ img {
   padding-right: 12px;
 }
 
+.field-adults::-webkit-outer-spin-button,
+.field-children::-webkit-outer-spin-button,
+.field-adults::-webkit-inner-spin-button,
+.field-children::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-form-list input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
 label.children {
   width: 65px;
 }
 
 .main-form-item input[type="number"] {
   box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
 
   width: 114px;
   height: 38px;
@@ -583,7 +622,7 @@ label.children {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 12px;
-  padding-right: 12px;
+  padding-right: 35px;
 
   font: inherit;
   background-color: var(--input-background);
@@ -1049,7 +1088,7 @@ fieldset.price-per-day {
   align-items: stretch;
 
   box-sizing: border-box;
-  width: 316px;
+  width: 317px;
   height: 36px;
 
 
@@ -1096,13 +1135,23 @@ fieldset.price-per-day {
   color: transparent;
 }
 
+.price-per-day input::-webkit-outer-spin-button,
+.price-per-day input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.price-per-day input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
 /* hotels-filter-button */
 .hotels-filter-button {
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
   padding-left: 34px;
   padding-right: 33px;
-  margin-left: auto;
+  margin-left: 85px;
   margin-right: auto;
 
   font-size: 14px;
