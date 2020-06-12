@@ -76,9 +76,9 @@ img {
   display: grid;
   grid-template-columns: 1fr 1200px 1fr;
   grid-template-areas:
-    ". header ."
-    ". main ."
-    ". footer .";
+    '. header .'
+    '. main .'
+    '. footer .';
   grid-template-rows: min-content 1fr min-content;
 }
 
@@ -205,7 +205,8 @@ img {
   grid-column-end: 4;
 
   background-color: var(--basic-dark);
-  background-image: url("../img/jagged.svg"), url("../img/background-photo.jpg");
+  background-image: url('../img/jagged.svg'), url('../img/background-photo.jpg');
+  object-fit: cover;
   background-position: bottom, center;
   background-repeat: no-repeat;
   text-align: center;
@@ -266,6 +267,12 @@ img {
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
+}
+
+.features-image-item {
+  width: 800px;
+  height: 256px;
+  object-fit: cover;
 }
 
 .features-text-right {
@@ -362,7 +369,7 @@ img {
 }
 
 .header-housing::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -100px;
   right: 50%;
@@ -378,7 +385,7 @@ img {
 }
 
 .header-food::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -99px;
   right: 50%;
@@ -393,7 +400,7 @@ img {
 }
 
 .header-souvenirs::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -105px;
   right: 50%;
@@ -553,7 +560,7 @@ img {
 }
 
 .main-form-item label,
-.main-form-item input[type="number"] {
+.main-form-item input[type='number'] {
   box-sizing: border-box;
 
   font-style: normal;
@@ -571,10 +578,14 @@ img {
   padding-right: 12px;
 }
 
-.field-adults::-webkit-outer-spin-button,
-.field-children::-webkit-outer-spin-button,
-.field-adults::-webkit-inner-spin-button,
-.field-children::-webkit-inner-spin-button {
+.field-adults-wrapper input::-webkit-outer-spin-button,
+.field-adults-wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.field-children-wrapper input::-webkit-outer-spin-button,
+.field-children-wrapper input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -587,7 +598,7 @@ label.children {
   width: 65px;
 }
 
-.main-form-item input[type="number"] {
+.main-form-item input[type='number'] {
   box-sizing: border-box;
   padding-left: 30px;
   padding-right: 30px;
@@ -603,7 +614,7 @@ label.children {
   color: var(--basic-black)
 }
 
-.main-form-item input[type="text"] {
+.main-form-item input[type='text'] {
   box-sizing: border-box;
 
   width: 346px;
@@ -1023,45 +1034,45 @@ fieldset.price-per-day {
 }
 
 .filter-input-checkbox + label::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 23px;
   height: 23px;
-  background-image: url(../img/checkbox-off.svg);
+  background-image: url('data:image/svg+xml,%3Csvg width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17c1.65 0 3 1.35 3 3v17c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3zm18 3c0-.542-.458-1-1-1H3c-.542 0-1 .458-1 1v17c0 .542.458 1 1 1h17c.542 0 1-.458 1-1V3z" fill="%23fff"/%3E%3C/svg%3E');
 }
 
 .filter-input-checkbox:checked + label::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 27px;
   height: 23px;
-  background-image: url(../img/checkbox-on.svg);
+  background-image: url('data:image/svg+xml,%3Csvg width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829L12.24 12.439 7.285 7.486z" fill="%23fff"/%3E%3Cpath d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0020 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" fill="%23fff"/%3E%3C/svg%3E');
 }
 
 .filter-input-checkbox.disabled + label::before,
 .filter-input-checkbox:disabled + label::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 23px;
   height: 23px;
-  background-image: url(../img/checkbox-off-disabled.svg);
+  background-image: url('data:image/svg+xml,%3Csvg width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17c1.65 0 3 1.35 3 3v17c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3zm18 3c0-.542-.458-1-1-1H3c-.542 0-1 .458-1 1v17c0 .542.458 1 1 1h17c.542 0 1-.458 1-1V3z" fill="%236A6A6A"/%3E%3C/svg%3E%0A');
 }
 
 .filter-input-checkbox.disabled:checked + label::before,
 .filter-input-checkbox:checked:disabled + label::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 27px;
   height: 23px;
-  background-image: url(../img/checkbox-on-disabled.svg);
+  background-image: url('data:image/svg+xml,%3Csvg width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829L12.24 12.439 7.285 7.486z" fill="%236A6A6A"/%3E%3Cpath d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0020 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" fill="%236A6A6A"/%3E%3C/svg%3E%0A');
 }
 
 .filter-input-checkbox.disabled + label,
@@ -1098,7 +1109,7 @@ fieldset.price-per-day {
 }
 
 .price-per-day .price-fields-list::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 5px;
   left: 157px;
@@ -1297,6 +1308,12 @@ fieldset.price-per-day {
 
   background-color: var(--input-background);
 }
+
+.hotels-item-image img {
+  width: 135px;
+  height: 90px;
+  object-fit: cover;
+  }
 
 .hotels-content-wrapper {
   display: flex;
