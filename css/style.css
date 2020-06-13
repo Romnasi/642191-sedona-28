@@ -24,6 +24,7 @@
   --input-border-focus: #E5E5E5;
   --shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
   --shadow-form: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  --not-active: #CACACA;
 }
 
 /* Visually-hidden */
@@ -79,12 +80,15 @@ img {
     '. header .'
     '. main .'
     '. footer .';
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content min-content;
 }
 
 
 /* header */
 .main-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: header;
   min-width: 1200px;
 
@@ -181,6 +185,8 @@ img {
 
 /* Main */
 .container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: main;
 
   background-color: var(--basic-light);
@@ -206,7 +212,8 @@ img {
 
   background-color: var(--basic-dark);
   background-image: url('../img/jagged.svg'), url('../img/background-photo.jpg');
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-position: bottom, center;
   background-repeat: no-repeat;
   text-align: center;
@@ -272,7 +279,8 @@ img {
 .features-image-item {
   width: 800px;
   height: 256px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .features-text-right {
@@ -648,6 +656,27 @@ label.children {
 .main-form-item input:focus {
   background-color: var(--basic-light);
   border: 2px solid var(--input-border-focus);
+  outline: none;
+}
+
+
+.main-form-item input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+
+.main-form-item input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--basic-black);
 }
 
 
@@ -659,11 +688,6 @@ label.children {
   font-weight: bold;
   color: var(--basic-black);
 }
-
-.main-form-item input:focus::placeholder {
-  color: transparent;
-}
-
 
 /* Fields button */
 .main-form-item button {
@@ -749,8 +773,14 @@ label.children {
 
 /* main-map */
 .main-map {
+  min-height: 594px;
   font-size: 0;
   line-height: 0;
+  background-image: url('../img/map.png')
+}
+
+.main-map iframe {
+  border: none;
 }
 
 /* Main-footer */
@@ -764,6 +794,8 @@ label.children {
 
 /* footer */
 .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: footer;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1030,9 +1062,12 @@ fieldset.price-per-day {
   display: block;
   padding-left: 40px;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
+/* filter-input-checkbox */
 .filter-input-checkbox + label::before {
   content: '';
   position: absolute;
@@ -1083,6 +1118,17 @@ fieldset.price-per-day {
   cursor: default;
 }
 
+/* focus checkbox */
+.filter-input-checkbox:focus + label::after {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 0 2px var(--basic-blue);
+  border-radius: 2px;
+}
 
 /* price-per-day */
 .price-fields-wrapper {
@@ -1136,14 +1182,22 @@ fieldset.price-per-day {
   text-transform: uppercase;
 }
 
-.price-per-day input::placeholder {
+.price-per-day input::-webkit-input-placeholder {
   color: black;
   text-transform: uppercase;
   color: var(--basic-light);
 }
 
-.price-per-day input:focus::placeholder {
-  color: transparent;
+.price-per-day input::-moz-placeholder {
+  color: black;
+  text-transform: uppercase;
+  color: var(--basic-light);
+}
+
+.price-per-day input::placeholder {
+  color: black;
+  text-transform: uppercase;
+  color: var(--basic-light);
 }
 
 .price-per-day input::-webkit-outer-spin-button,
@@ -1230,18 +1284,24 @@ fieldset.price-per-day {
   margin-right: auto;
 }
 
+/* hotels-sort-quantity */
 .hotels-sort-quantity {
   align-self: flex-end;
 }
 
-.ascending:hover path,
-.descending:hover path
- {
+.sort-quantity-item path {
+  fill: var(--not-active);
+}
+
+.sort-quantity-item.active path {
+  fill: var(--basic-blue);
+}
+
+.sort-quantity-item:hover:not(.active) path {
   fill: var(--basic-black);
 }
 
-.ascending:active path,
-.descending:active path {
+.sort-quantity-item:active:not(.active) path {
   fill: var(--basic-blue);
 }
 
@@ -1312,7 +1372,8 @@ fieldset.price-per-day {
 .hotels-item-image img {
   width: 135px;
   height: 90px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   }
 
 .hotels-content-wrapper {
