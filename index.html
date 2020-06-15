@@ -5,7 +5,7 @@
     <title>Седона — аутентичный городок в Аризоне</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/min.style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
 
@@ -108,14 +108,14 @@
           <button class="button hidding-form" type="button"><span>Поиск гостиницы в Седоне</span></button>
         </div>
 
-        <form class="main-form-search" action="https://echo.htmlacademy.ru" method="post">
+        <form class="main-form-search hide" action="https://echo.htmlacademy.ru" method="post">
           <fieldset>
             <legend class="visually-hidden">Даты заезда и выезда</legend>
             <ul class="date-form-list">
               <li class="main-form-item">
                 <label for="date-arrival">Дата заезда:</label>
                 <div class="date-arrival-wrapper">
-                  <input type="text" id="date-arrival" name="date-arrival" placeholder="24 апреля 2017">
+                  <input class="date-arrival-field" type="text" id="date-arrival" name="date-arrival" placeholder="24 апреля 2017" >
                   <button class="button-calendar" type="button">
                     <span class="visually-hidden">Выбрать дату</span>
                     <svg width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,7 +128,7 @@
               <li class="main-form-item">
                 <label for="date-departure">Дата выезда:</label>
                 <div class="date-departure-wrapper">
-                  <input type="text" id="date-departure" name="date-departure" placeholder="4 июля 2017">
+                  <input class="date-departure-field" type="text" id="date-departure" name="date-departure" placeholder="4 июля 2017">
                   <button class="button-calendar" type="button">
                     <span class="visually-hidden">Выбрать дату</span>
                     <svg width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +152,7 @@
                       <path fill="#A9A9A9" d="M0 0h12v3H0z"/>
                     </svg>
                   </button>
-                  <input type="number" id="field-adults" name="field-adults" value="2" min="0" max="999">
+                  <input class="field-quantity-adults" type="number" id="field-adults" name="field-adults" value="2" min="0" max="999">
                   <button type="button" class="quantity-button button-plus">
                     <span class="visually-hidden">Увеличить количество</span>
                     <svg width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -170,7 +170,7 @@
                       <path fill="#A9A9A9" d="M0 0h12v3H0z"/>
                     </svg>
                   </button>
-                  <input type="number" id="field-children" name="field-children" value="0" min="0" max="999">
+                  <input class="field-quantity-children" type="number" id="field-children" name="field-children" value="0" min="0" max="999">
                   <button type="button" class="quantity-button button-plus">
                     <span class="visually-hidden">Увеличить количество</span>
                     <svg width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -239,6 +239,6 @@
       </div>
 
     </footer>
-
+    <script src="js/script.js"></script>
   </body>
 </html>
