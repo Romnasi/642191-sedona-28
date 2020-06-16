@@ -27,9 +27,14 @@ buttonHide.addEventListener('click', function () {
 });
 
 mainForm.addEventListener('submit', function (evt) {
+  if (mainForm.classList.contains('form-error')) {
+    mainForm.classList.remove("form-error");
+    mainForm.offsetWidth = mainForm.offsetWidth;
+  }
+
   if (!dateArrival.value || !dateDeparture.value || !quantityAdults.value || !quantityChildren.value) {
     evt.preventDefault();
-
+    mainForm.classList.add("form-error");
   } else {
     if (isStorageSupport) {
       localStorage.setItem('adults', quantityAdults.value);
