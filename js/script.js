@@ -9,6 +9,8 @@ let isStorageSupport = true;
 let storageAdults = '';
 let storageChildren = '';
 
+mainForm.classList.add("hide");
+
 try {
   storageAdults = localStorage.getItem('adults');
   storageChildren = localStorage.getItem('children');
